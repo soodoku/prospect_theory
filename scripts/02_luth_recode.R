@@ -3,6 +3,7 @@ library(readr)
 library(stringr)
 library(haven)
 library(car)
+library(janitor)
 
 # Load Data
 luth <- read_csv("data/luth/luth1024.csv")
@@ -18,15 +19,14 @@ dem_luth <- read_sav("data/luth/dem.luth.sav") %>%
 # Merge Sociodem + Survey
 luth_dem_merge <- luth %>%
   inner_join(dem_luth, by = c("uniq" = "partid"))
-nrow(luth_dem_merge)
 
 # Merge Luth with Party ID
 party_luth <- read_sav("data/luth/party.luth.sav") %>%
   mutate(partid = clean(identifier))
 
 luth2 <- luth_dem_merge %>%
-  left_join(party_luth, by = c("uniq" = "partid"))
-nrow(luth2)
+  left_join(party_luth, by = c("uniq" = "partid")) %>%
+  janitor::clean_names()
 
 # By Day Issues
 luth2 <- luth2 %>%
@@ -133,7 +133,7 @@ luth2 <- luth2 %>%
 luth2 <- luth2 %>%
   mutate(
     # Combine q2a.y, q2b.y, and q2c into a single string for processing
-    combined_pid = paste(q2a.y, q2b.y, q2c, sep = ""),
+    combined_pid = paste(q2a, q2b, q2c, sep = ""),
     # Map combined_pid to pid7 values using case_when
     pid7 = case_when(
       combined_pid == "11NA" ~ 7,
@@ -157,7 +157,7 @@ luth2 <- luth2 %>%
   mutate(
     certain = case_when(
       qra == 1 ~ as.numeric(q1a == 1),
-      qra == 2 ~ as.numeric(q2a.x == 1),
+      qra == 2 ~ as.numeric(q2a == 1),
       qra == 3 ~ as.numeric(q3a == 1),
       qra == 4 ~ as.numeric(q4a == 1),
       qra == 5 ~ as.numeric(q5a == 1),
