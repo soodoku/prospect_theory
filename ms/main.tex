@@ -1,0 +1,312 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{fontspec}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{pdflscape}
+\usepackage{placeins}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage[backend=biber,style=authoryear,maxcitenames=2,maxbibnames=20]{biblatex}
+
+\setlength{\emergencystretch}{1em}
+
+\addbibresource{../lit/references.bib}
+\input{../tabs/macros.tex}
+\input{../tabs/diagnostic_macros.tex}
+\input{../tabs/moderator_macros.tex}
+\input{../tabs/protzko_macros.tex}
+\input{../tabs/open_ended_macros.tex}
+\input{../meta/tables/archive_meta_macros.tex}
+\input{../meta/tables/manipulation_meta_macros.tex}
+
+\title{Description Invariance in Risky-Choice Framing:\
+Evidence from Five Survey Experiments}
+\author{John Protzko \and Gaurav Sood \and Jon A. Krosnick}
+\date{Draft: \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Description invariance is a foundational requirement of rational choice: two descriptions of the same prospect should elicit the same preference. The Asian Disease Problem is its canonical violation; in the original demonstration, describing identical outcomes as lives saved rather than lives lost moved the share choosing the certain option by 50 percentage points. Five randomized survey experiments spanning nine years show that the direction of that violation is a stable fact but its size is not. The archive comprises \ArchiveMetaN\ respondents and \ArchiveMetaK\ independent gain-loss contrasts: a national area-probability panel, a volunteer panel that fielded nine versions of the problem, and three factorial experiments that ran an identical instrument, with every deployed treatment documented arm by arm. Every contrast is positive, and the average of \ArchiveMetaEffect\ points (95\% CI \ArchiveMetaLow\ to \ArchiveMetaHigh) is enough to move roughly one respondent in four. The size instead tracks what the descriptions leave unstated. Relative to each survey's original wording, fully stating the certain option removed more than half of the effect (\BalancedAttenuation\ points across the four surveys that fielded it), while reversing the order of the risky option's outcomes left the effect essentially unchanged (\FlipChangeEffect\ points across five surveys). The contrast also grows modestly with education (\EducationMetaEffect\ points per category, exploratory). This pattern is consistent with respondents drawing inferences from incomplete descriptions rather than reacting to gain and loss labels alone. The analysis is a retrospective specification over archival records, and we present it as an audited replication and robustness study.
+\end{abstract}
+
+\onehalfspacing
+
+\section{Introduction}
+
+Equivalent gain and loss descriptions of the Asian Disease problem produced a higher certain-choice rate in the gain frame in all 23 valid contrasts from five archival experiments. But the size of that contrast varied with the wording of the options. The paper asks a narrower and more useful question than whether wording matters: which aspects of a risky-choice description preserve the classic direction, and which change its magnitude?
+
+The Asian Disease Problem asks respondents to choose between a certain program and a risky program with the same expected outcome. In the original experiment, 72 percent chose the certain program when outcomes were described as lives saved, while 22 percent chose its equivalent when outcomes were described as lives lost \parencite{tversky1981framing}. The result became a central illustration of risky-choice framing and an application of prospect theory \parencite{kahneman1979prospect,levin1998typology}. It is also a direct failure of description invariance: if two descriptions represent the same prospect, a stable preference should not depend on which description is used \parencite{kahneman1984choices}.
+
+The canonical task leaves open what, exactly, respondents represent. The certain gain says that 200 people will be saved but says nothing about the other 400. The certain loss says that 400 people will die but says nothing about the other 200. Under the intended reading, both descriptions represent 200 survivors and 400 deaths. But the unstated complement may invite different inferences about the people not mentioned. The task also always lists the certain option first and presents the two outcomes of the risky option in one order. Those presentation choices do not confound the randomized frame contrast by themselves. They can matter, though, if their effects interact with the frame or change how respondents construe the alternatives.
+
+This distinction is theoretical as well as methodological. Prospect theory attributes the shift to evaluation relative to a reference point and to different attitudes toward risk in gains and losses \parencite{kahneman1979prospect,tversky1992advances}. Fuzzy-trace theory emphasizes the qualitative contrast between saving some people for sure and risking that none are saved \parencite{reyna1991fuzzy,kuhberger2010task}. Linguistic and communicative accounts distinguish the wording of a descriptor from the outcome it denotes, treat unstated complements as an interpretive problem, or treat a speaker's choice of frame as information \parencite{mandel2001gainloss,mckenzie2003speaker,sher2006information}. Explicated-valence and query-theory accounts instead focus on the valence of the stated components and on the order in which option-favoring reasons come to mind \parencite{tombu2015valence,wall2020query,composto2025query}. A gain-loss difference alone cannot choose among these accounts.
+
+Prior work shows why that restraint matters. Changing causal information or making quantifiers explicit can change the interpretation of incomplete options \parencite{jou1996schemas,mandel2014irrational}. Changing which complements are stated can attenuate, eliminate, or reverse the standard contrast \parencite{kuhberger1995newlook,kuhberger2010task,zhou2021descriptions}. But framing can survive intensive linguistic disambiguation \parencite{chick2016ambiguity}. Recent designs that vary matched and mismatched descriptions find that description valence explains substantial variation while a residual framing effect remains even when options are matched and complete \parencite{dekay2024mismatched,dekay2026complete}. The live theoretical issue is therefore not whether one wording artifact explains the Asian Disease result. It is which description features alter choice and which leave the directional contrast intact.
+
+The broader evidence makes the same point. The directional pattern appears in the original meta-analysis and its reanalysis, a multilaboratory replication, a 49-country study, and recent systematic and meta-analytic reviews \parencite{kuhberger1998meta,klein2014manylabs,steiger2018reappraisal,im2022crossnational,kuhberger2023systematic,ding2025meta}. Yet task domain, probabilities, option descriptions, and procedures contribute to heterogeneity \parencite{kuhberger1999reflection,diederich2018moderators,dekay2022metastudies}. A useful paper should therefore report both the direction of the gain-loss contrast and the task conditions under which its size changes.
+
+We use five archival experiments to do that. Two 2009 experiments, one fielded in a U.S. area-probability online panel and one in a screened volunteer panel, vary response order, the order of outcomes within the risky option, the expected outcome of the certain option, whether the certain option states both outcomes, and the scenario wording. The 199 and 201 wording pairs are especially informative: within each pair, the gain and loss descriptions remain equivalent, while the certain outcome moves one life below or above the gamble's expected outcome. They test local description invariance, not a full value function. Three 2018 factorial experiments independently cross the frame with risky-option order and a balanced certain-option description. The 23 resulting gain-loss contrasts permit feature-specific estimates and an archive-wide synthesis of heterogeneity.
+
+Several of these manipulations recur across surveys: reversing the outcome order within the risky option was fielded in both 2009 surveys and randomized in all three 2018 experiments, and fully stating the certain option was fielded in the volunteer panel and randomized in 2018. We therefore organize the results by manipulation, reporting every estimate of each wording change together, with the surveys as replications. The two vintages still contribute different kinds of estimates. The 2009 variants yield pair-specific framing contrasts that ask whether the classic effect survives a plausible change to a deployed survey question. The 2018 factorial experiments additionally yield interaction terms that estimate how a manipulation changes the contrast. We keep those quantities labeled throughout, and we use the archive-wide meta-analysis only to summarize the distribution of valid gain-loss contrasts, not to manufacture a single universal effect size.
+
+The experiments predate much of the literature that now frames these issues, but the current analysis does not. Earlier scripts and outputs were available before the present specification was written. We therefore treat the study as a retrospective archival analysis, report effect sizes and uncertainty, and avoid confirmatory or priority claims.
+
+\section{Methods}
+
+\subsection{Experimental logic and estimands}
+
+Each study contributes a gain-minus-loss risk difference: the proportion choosing the certain option in the gain frame minus the corresponding proportion in the loss frame. A positive value is the classic framing direction. The key estimand is not a single universal effect size but the change in that risk difference under each wording or representation manipulation.
+
+The 2009 experiments vary the written description while preserving randomized gain-versus-loss assignment within wording pairs. These variants test description invariance and the sensitivity of the contrast to order, completeness, and expected-outcome wording. The 2018 experiments use a factorial design in which frame is crossed with an internal flip of the risky option's outcome order and a factor historically described as a balanced statement of the certain outcomes. Their interaction terms estimate how each manipulation changes the gain-minus-loss contrast. These are tests of description invariance, not estimates of a value function, probability-weighting function, or other structural parameter of prospect theory.
+
+Throughout, an \emph{arm} is a numbered randomized condition; a \emph{wording pair} is a gain-loss pair of arms in a 2009 experiment; a \emph{design cell} is a combination of the two 2018 factors; and a \emph{manipulation family} groups the wording pairs and design cells that implement the same textual change, wherever it was fielded. The family taxonomy is descriptive: it names which deployed treatments alter the same feature of the problem so that their estimates can be read together, and the analysis registry encodes it so that every exhibit uses the same assignment and labels. Reversing the risky option's outcome order appears in all five experiments; fully stating the certain option appears in the volunteer panel and, as the functionally described balanced factor, in all three 2018 experiments.
+
+\subsection{Samples and data provenance}
+
+Stanford University and Abt SRBI built the Face-to-Face Recruited Internet Survey Platform, or FFRISP, with National Science Foundation funding \parencite{ackermann2009ffrisp}. Its target population was English-speaking adult household residents in the 50 states and the District of Columbia. The three-stage area-probability design sampled 50 primary sampling units, 256 segments, and 3,723 addresses. Interviewers screened households and used an automated system to select one adult at random. Of 1,145 selected eligible adults, 1,000 enrolled during 2008.
+
+The recruitment offer described the study, incentives, and participants' rights before consent. All enrollees were offered a Dell Vostro 1000 laptop for the 12-month panel; 57 who already owned a computer and declined another received up to \$500 instead. Abt SRBI paid for high-speed internet for about 260 households and offered quarterly completion incentives. The framing experiment appeared in the twelfth monthly survey in September 2009. The export contains 902 completed records. Four test or nonpanel identifiers were removed, leaving 898 respondents; 887 supplied a valid framing choice. All 898 matched the panel profile, and 896 matched the archived month 12 weight. Appendix Table~\ref{tab:ffrisp-retention} reports retention across all 12 waves.
+
+The Luth volunteer-panel experiment was completed by 2,330 respondents from October 7 through October 14, 2009. A question presented before the experiment asked respondents to select a specified response. The primary analysis includes the 2,017 respondents who complied. Arms 7 and 8 formed a planned gain-loss pair, but the deployed loss-frame stem named Programs C and D while the response options named Programs A and B. We exclude both arms, leaving 1,777 respondents in valid wording pairs. A sensitivity analysis retains all completed respondents while continuing to exclude the defective pair.
+
+The available 2018 archive contains two survey exports labeled Stanford discovery and Stanford replication and one labeled UCSB replication. They contain 1,647, 1,442, and 1,500 respondents, respectively. Four Stanford respondents lack a valid first choice, leaving \ProtzkoN\ observations. The Stanford exports record two frame questions per respondent; we use only the first, matching the received anonymous combined file and avoiding carryover from a prior frame. The UCSB export contributes one choice per respondent. The original questionnaire, sampling documentation, and November 2019 manuscript are not present in the archive, so institutional labels identify the archived studies but do not establish their sampling frames.
+
+\subsection{Design and measures}
+
+Within each wording pair, odd-numbered conditions used a gain frame and even-numbered conditions used a loss frame. Each respondent saw one condition. The outcome equals one for choosing the certain option and zero for choosing the risky option. Response coding accounts for conditions in which the risky option appeared first.
+
+FFRISP included three wording pairs: the original wording, a reversal of the outcome order within the risky option, and an expanded scenario involving two drugs. Luth included the original plus eight planned variants. Two variants changed the certain outcome to 199 saved and 401 lost, or to 201 saved and 399 lost. Within each variant, the gain and loss descriptions specify the same sure outcome and the risky option remains unchanged. The 199, 200, and 201 pairs therefore provide three local tests of description invariance while moving the sure outcome around the gamble's expected outcome. Other variants reversed response order, stated both parts of the certain outcome, reversed the order of those parts, reversed the order of outcomes within the risky option, or combined risky-outcome and response-order reversals. The ninth planned pair used natural-frequency language but is excluded because of the instrument defect.
+
+Education was harmonized into four ordered categories. The Luth political survey also included five factual questions about national institutions and officeholders. We score the proportion correct only for respondents who completed that survey. This battery measures political knowledge, not intelligence or general cognitive ability.
+
+The 2018 exports record three binary factors: gain versus loss frame, original versus internally flipped presentation, and whether the certain option was balanced by stating both outcomes. The complete fielded wording is unavailable, so we describe the balanced factor functionally rather than quote its text. The Stanford exports also carry the questionnaire's block-assignment labels, which name each arm and its frame order; the build verifies that these labels agree with the recorded factor coding for every respondent, and the UCSB export's precomputed interaction columns pass the analogous check. Source code $-99$ is treated as item nonresponse. The received four-variable combined file is not used as an analytical source because it adds one blank row and changes one source-missing first choice to zero.
+
+\subsection{Estimands and inference}
+
+For each wording pair, the estimand is the gain-frame proportion choosing the certain option minus the corresponding loss-frame proportion. We estimate this difference with a linear probability model and HC2 standard errors. The point estimate is exactly the raw difference in means. A saturated model within each sample tests whether all frame-by-wording interactions equal zero.
+
+Every contrast is estimated within a single survey, and every exhibit reports the survey-level estimates. For each manipulation, we also estimate its effect on the framing contrast as a within-survey change: the framing contrast under the manipulated wording minus the framing contrast under the same survey's original wording. Because the two wordings are disjoint randomized arms of one survey, the change is a clean comparison and its variance is the sum of the two contrast variances; sample composition cannot explain it.
+
+Surveys are combined in exactly two ways, each labeled where it appears. First, random-effects meta-analysis pools survey-level estimates, treating surveys as replications and allowing between-survey heterogeneity; this is how the archive-wide synthesis, the manipulation-effect synthesis, and the education-moderation synthesis are computed. Second, respondent-level pooling with study indicators is used only where a single model needs cells combined across the three 2018 studies, whose factorial design is identical: the 2018 factorial interaction terms and the pooled moderator models. No analysis pools 2009 respondents across FFRISP and Luth.
+
+The main randomized comparisons are unweighted because treatment assignment occurred within the realized samples. As a population-generalization sensitivity, we reestimate the FFRISP original-wording contrast using the archived month 12 weight, 25 strata, and two primary sampling units per stratum. The methods report documents the base-weight construction and the month 1 raking procedure but not who produced the month 12 weight or whether the same procedure was used. We therefore treat the weighted result as a descriptive sensitivity, not a fully documented population estimate. We also reestimate the Luth original contrast without its pre-treatment attention screen.
+
+Moderator analyses are exploratory. The 2009 analyses pool valid wording pairs within each sample and include wording indicators, wording-by-frame interactions, a moderator main effect, and a moderator-by-frame interaction. We also estimate education-by-frame interactions in the three 2018 experiments and in the pooled five-experiment archive, adjusting for experiment indicators, experiment-by-frame interactions, and the internal-flip and balanced-certain-option factors; in the pooled model, the registry codes classify the 2009 arms on those same two factors, so the wording pairs that reverse the risky-option order or fully state the certain option are coded as such rather than as original-format. We report raw and Holm-adjusted $p$ values. The full retrospective specification and all recodes are documented in the repository.
+
+For the 2018 experiments, a pooled linear probability model includes study indicators and all interactions among frame, internal flip, and the balanced-certain-option factor, again with HC2 standard errors. We also estimate the gain-minus-loss contrast separately for each design combination within each study.
+
+A separate archive-wide synthesis treats the 11 valid 2009 wording comparisons and 12 valid 2018 factorial comparisons as independent risk differences. The primary random-effects model uses restricted maximum likelihood and Knapp--Hartung inference; a fixed-effect model is a sensitivity analysis. This synthesis summarizes the available archive rather than the published literature, so we do not use funnel asymmetry as a publication-bias diagnostic.
+
+\section{Results}
+
+We report the results by manipulation rather than by survey: each subsection states what one family of wording changes tests, reports every estimate of it in the archive, and says what those estimates show. Table~\ref{tab:family-effects} and Figure~\ref{fig:family-effects} organize all 23 valid gain-loss contrasts this way, with the five surveys as columns and manipulations as rows; every cell is a within-survey estimate, and blank cells mark manipulations a survey did not field. Within each family, the 2009 experiments contribute pair-specific framing contrasts, while the 2018 experiments contribute both cell-specific contrasts and factorial interaction terms that estimate how the manipulation changes the framing contrast. We keep those two kinds of estimates labeled throughout because they are not the same quantity, and we combine surveys only by the two labeled routes described in the methods. Appendix Table~\ref{tab:effects} reports the same estimates grouped by survey.
+
+\FloatBarrier
+\begingroup
+\setlength{\tabcolsep}{2pt}
+\input{../tabs/family_effects.tex}
+\endgroup
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=\textwidth]{../figs/family_effects.pdf}
+  \caption{Gain-frame minus loss-frame differences in choosing the certain option, organized by manipulation family. Points are differences in percentage points; lines are 95 percent confidence intervals based on HC2 standard errors. Every point is a within-survey estimate; the three 2018 studies appear separately. The defective Luth natural-frequency pair is omitted.}
+  \label{fig:family-effects}
+\end{figure}
+\FloatBarrier
+
+\subsection{The original problem}
+
+The original wording reproduced the classic directional contrast in every survey that fielded it. In FFRISP, \FFROriginalGain\ percent chose the certain option in the gain frame and \FFROriginalLoss\ percent did so in the loss frame. The difference was \FFROriginalEffect\ percentage points, with a 95 percent confidence interval from \FFROriginalLow\ to \FFROriginalHigh\ ($N=\FFROriginalN$). In Luth, the corresponding proportions were \LuthOriginalGain\ and \LuthOriginalLoss\ percent, a difference of \LuthOriginalEffect\ points with an interval from \LuthOriginalLow\ to \LuthOriginalHigh\ ($N=\LuthOriginalN$). In the three 2018 experiments, the original-format contrasts ranged from \ProtzkoOriginalMin\ to \ProtzkoOriginalMax\ points. The original problem therefore establishes the benchmark against which every manipulation below is read: a framing contrast between roughly \LuthOriginalEffect\ and \ProtzkoOriginalMax\ points in five samples recruited nine years apart.
+
+\subsection{Reordering outcomes within the risky option}
+
+If the framing contrast depended on which risky outcome respondents read first, stating the failure outcome before the success outcome would change it. It did not. The contrast was \FFRArmRiskyFlipEffect\ points in FFRISP and \LuthArmRiskyFlipEffect\ points in Luth under the reversed order, close to each survey's original-wording estimate, and between \ProtzkoFlipMin\ and \ProtzkoFlipMax\ points in the flipped cells of the three 2018 experiments. This manipulation was fielded in all five surveys, so its effect on the contrast can be estimated five times, each as a within-survey change against that survey's original wording: the pooled change is \FlipChangeEffect\ points (95 percent CI \FlipChangeLow\ to \FlipChangeHigh; \FlipChangeK\ surveys; Appendix Table~\ref{tab:manipulation-meta}). The 2018 factorial interaction agrees ($\ProtzkoFlipInteraction$ points, $p=\ProtzkoFlipP$). The order of outcomes inside the risky option is not load-bearing for the effect.
+
+\subsection{Reordering the response options}
+
+Listing the risky option first, rather than the certain option, likewise left the contrast intact: \LuthArmResponseOrderEffect\ points in the Luth response-order pair, and \LuthArmRiskyResponseEffect\ points when the response-order reversal was combined with the risky-outcome reversal. Neither estimate is reliably different from the Luth original. Where the options appear on the screen, like the order of clauses inside them, does not carry the effect.
+
+\subsection{Stating the certain option completely}
+
+The certain option in the original problem describes only one outcome: 200 saved, or 400 dead, with the complement left unstated. Completing the description is the one manipulation in this archive that reliably changed the size of the contrast. In Luth, fully stating the certain option cut the contrast to \LuthArmBalancedEffect\ points, and additionally reversing the order of its two components cut it to \LuthArmBalancedReversedEffect\ points, the smallest valid estimate in the archive. The 2018 experiments randomized a functionally described balanced certain option: their balanced-cell contrasts ranged from \ProtzkoBalancedMin\ to \ProtzkoBalancedMax\ points across the three studies, against \ProtzkoOriginalMin\ to \ProtzkoOriginalMax\ points in their original-format cells. Fully stating the certain option was fielded in four surveys, and its within-survey change against the original wording is negative in all four: pooled, it reduced the framing contrast by \BalancedAttenuation\ points (95 percent CI \BalancedAttenuationLow\ to \BalancedAttenuationHigh; \BalancedChangeK\ surveys; Appendix Table~\ref{tab:manipulation-meta}). Combining balancing with the risky-outcome flip reduced the contrast by a pooled \BalancedFlipAttenuation\ points across the three 2018 studies, but that synthesis is imprecise (95 percent CI $\BalancedFlipAttenuationLow$ to \BalancedFlipAttenuationHigh) because the UCSB estimate for the combined cell runs the other way. The respondent-level 2018 factorial model agrees: balancing reduced the contrast by \ProtzkoExplicitAttenuation\ points (95 percent CI \ProtzkoExplicitAttenuationLow\ to \ProtzkoExplicitAttenuationHigh, $p\ProtzkoExplicitP$), with a three-way interaction of \ProtzkoThreeWay\ points ($p=\ProtzkoThreeWayP$). Every balanced-cell contrast nevertheless remains positive (Table~\ref{tab:family-effects}; Appendix Table~\ref{tab:protzko-effects} reports the pooled design cells). Completing the certain option attenuates the effect; it does not eliminate it.
+
+\subsection{Moving the sure outcome: 199, 200, and 201}
+
+Two Luth pairs changed the certain outcome to 199 saved and 401 lost, or to 201 saved and 399 lost. Within each pair the gain and loss descriptions remain extensionally equivalent, so each pair is a local test of description invariance while the sure outcome moves one life below or above the gamble's expected outcome. The contrast was \LuthArmLowerEffect\ points at 199 and \LuthArmUpperEffect\ points at 201, positive at both values. Figure~\ref{fig:invariance-profile} shows the frame-specific choice rates at all three values: the gain and loss profiles remain separated across the range. Because the between-frame comparison is randomized at each value, the one-life shift does not confound it. But three nearby binary-choice points provide only a local choice profile; they cannot identify a value function, locate frame-specific certainty equivalents, or distinguish prospect theory from linguistic and representational accounts.
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=\textwidth]{../figs/invariance_profile.pdf}
+  \caption{Local description-invariance profile in the Luth primary sample. Points are percentages choosing the certain option at each sure number of survivors; lines connect the three observed values within each frame. Vertical lines are 95 percent confidence intervals for each cell mean. At every value, the gain and loss descriptions specify the same objective sure outcome and the same risky option. Description invariance therefore predicts overlapping gain- and loss-frame profiles.}
+  \label{fig:invariance-profile}
+\end{figure}
+
+\subsection{Rewording the scenario}
+
+The expanded FFRISP variant rewrote the task wholesale: a drug-choice scenario with the probabilities expressed as chances, added contextual detail, and no reference to an Asian disease. The contrast was \FFRArmRewordingEffect\ points, the largest FFRISP estimate. The effect does not depend on the canonical text. The ninth planned Luth pair, which expressed the risky probabilities as natural frequencies, would have spoken to the same question, but its deployed loss-frame stem named different programs than its response options, so both of its arms are excluded.
+
+\subsection{Within-survey heterogeneity and archive-wide synthesis}
+
+Joint tests summarize the wording variation within each 2009 survey. The three FFRISP estimates range from \FFRMinimumEffect\ to \FFRMaximumEffect\ points, and a joint test does not reject equality across the three wordings, $F=\FFRHeterogeneityF$, $p=\FFRHeterogeneityP$. The Luth estimates range from \LuthMinimumEffect\ to \LuthMaximumEffect\ points, and its joint test rejects a common framing contrast, $F=\LuthHeterogeneityF$, $p=\LuthHeterogeneityP$.
+
+Across all \ArchiveMetaK\ independent contrasts and \ArchiveMetaN\ analyzed choices, the random-effects mean was \ArchiveMetaEffect\ percentage points (95 percent CI \ArchiveMetaLow\ to \ArchiveMetaHigh). Heterogeneity was substantial ($I^2=\ArchiveMetaISquared\%$), and the 95 percent prediction interval ranged from \ArchiveMetaPredLow\ to \ArchiveMetaPredHigh\ points. The interval remains positive but is much wider than the confidence interval for the mean. It therefore supports a stable average direction while rejecting the idea that one effect magnitude characterizes every archived task. The manipulation-effect synthesis in Appendix Table~\ref{tab:manipulation-meta} organizes that heterogeneity: because each manipulation is differenced against its own survey's original wording, those within-survey changes attribute the variation to description features rather than to samples, and the certain-option completeness manipulations account for the large attenuations. Appendix Figure~\ref{fig:archive-meta} displays all constituent estimates.
+
+\input{../meta/tables/archive_meta_summary.tex}
+
+\subsection{Post-choice explanations}
+
+The Luth open-ended responses provide a limited check on how respondents described their choices. Among \OpenEndedN\ respondents with a valid primary code, the two most common categories were a chance that everyone survives and certainty or risk aversion. Those categories were similarly common in the gain and loss frames: the chance category appeared for \OpenEndedChanceGain\ percent and \OpenEndedChanceLoss\ percent of respondents, respectively, and the certainty category for \OpenEndedCertaintyGain\ and \OpenEndedCertaintyLoss\ percent. The adjusted loss-minus-gain differences were \OpenEndedChanceDiff\ and \OpenEndedCertaintyDiff\ percentage points, and none of the eight category differences survived Holm adjustment (Appendix Table~\ref{tab:open-ended-frame-effects}). Thus, the coded explanations do not supply parallel evidence that framing shifted these broad, post-choice rationales. Because the explanations followed choice and the historical coding scheme has overlapping categories, they cannot identify the process that produced the choice difference.
+
+\subsection{Sensitivity}
+
+The original-wording estimates are stable to the two planned sample sensitivities. Survey weighting changes the FFRISP point estimate modestly but leaves a clear positive contrast. Including all completed Luth respondents produces nearly the same estimate as the screened analysis. Table~\ref{tab:sensitivity} reports both checks.
+
+\subsection{Moderation by education}
+
+Table~\ref{tab:education-meta} reports the education-by-frame interaction estimated separately within each of the five experiments, each adjusting for its own randomized wording or design factors, and the random-effects synthesis of the five coefficients. Every experiment's point estimate is positive, though each is individually imprecise. The synthesis estimates that the framing contrast grows by \EducationMetaEffect\ points per education category (95\% CI \EducationMetaLow\ to \EducationMetaHigh), with essentially no between-experiment heterogeneity ($I^2=\EducationMetaISquared\%$). The respondent-level pooled models agree: \ModeratorArchiveInteraction\ points per category across the three 2018 experiments and \ModeratorAllInteraction\ points across all five experiments (95\% CI \ModeratorAllLow\ to \ModeratorAllHigh). The individual experiments are imprecise, so the synthesis, not any single survey, carries the estimate. These results do not support a claim that greater measured knowledge eliminates the framing contrast; if anything, the contrast is larger at higher education. They are exploratory, may reflect residual differences in sample composition or measurement, and are not tests of intelligence; education is an imperfect proxy for reasoning ability, and the political-knowledge interaction in Appendix Table~\ref{tab:moderators} is imprecise and does not survive Holm adjustment.
+
+\input{../tabs/education_meta.tex}
+
+\section{Discussion}
+
+The experiments yield a simple result with an important qualification. Gain versus loss language moved risky choice in the classic direction in every valid archived contrast. The original-wording contrast survived survey weighting in the probability panel and inclusion of attention-check failures in the volunteer panel. Fully stating or balancing the certain option attenuated the contrast in every survey that fielded that manipulation, while reversing the risky option's outcome order did not reliably change it in any of the five surveys. At the same time, the effect's magnitude varies considerably, and the archive-wide synthesis is inconsistent with one common effect size.
+
+The probability-panel result expands the range of people for whom the classic directional effect has been observed. Later comparisons across online panels have also found the Asian Disease effect in samples that differ in composition and recruitment \parencite{chandler2019panels,stagnaro2026samples}. Such evidence supports generality of direction more directly than exact generality of magnitude. The weighted FFRISP estimate is smaller than its unweighted estimate, and the two panels should not be treated as interchangeable representations of the U.S. adult population.
+
+The wording results fit a literature in which apparently redundant details alter the representation of the options. Fully stating or explicitly balancing an option reduces the contrast in some formulations, yet does not remove it. Reversing probability, response order, or internal order also does not mechanically erase the effect, consistent with an experiment that found neither order manipulation significant \parencite{peng2017mixed}. These patterns agree with evidence that description valence and completeness explain part, but not all, of risky-choice framing \parencite{dekay2024mismatched,dekay2026complete}. They are less compatible with treating one canonical wording as a context-free measure of a fixed individual bias.
+
+The 199 and 201 pairs sharpen the invariance result: the gain-loss gap is positive at all three sure outcomes even though each pair remains extensionally equivalent. As the results section emphasizes, three nearby binary-choice points provide only a local choice profile; they cannot identify a value function, locate frame-specific certainty equivalents, or distinguish prospect theory from linguistic and representational accounts.
+
+The exploratory moderator results also narrow the old manuscript's claims. Education is an imperfect proxy for reasoning ability, and political knowledge is a domain-specific factual measure. Neither justifies the label intelligence. Prior work has reported relations with reflection and numeracy \parencite{stanovich1998individual,leboeuf2003deep,peters2008numeracy}, but two experiments using several cognitive-style measures found no reliable predictor of frame-consistent choice beyond the frame itself \parencite{mandel2018cognitive}. The current intervals allow both small and meaningful moderation, so stronger conclusions require a design with validated cognitive measures and planned power for treatment heterogeneity.
+
+Several limitations remain. The analysis plan is retrospective. Luth is an opt-in sample, and the attention screen changes its target population. One planned wording pair is unusable because of a deployment error. The 2018 questionnaire, sampling documentation, original scripts, and November 2019 manuscript remain missing; consequently, we can verify the recorded factorial assignments and outcomes but not every historical procedural or reporting claim. Moderator data are missing for some respondents and were collected in separate panel surveys. The instruments were not designed to adjudicate modern formal accounts of description valence or gist. The archived explanations were elicited after choice rather than with a process-tracing design, unlike work that manipulates or records the order of reasons \parencite{wall2020query,composto2025query}. Their coding also has unresolved category overlap and no documented adjudication rule. It cannot establish respondents' decision processes or distinguish psychological from moral-reason accounts \parencite{zuradzki2026reasons}. Finally, the original ethics protocol numbers and current data-sharing authorization are not present in the archive and must be verified before journal submission.
+
+The most defensible conclusion is therefore bounded. Risky-choice framing was directionally robust across the five archived experiments, but its measured size was not a property of gain and loss labels alone. Small choices about what to state, what to leave implicit, and where to place information can materially change the estimate.
+
+\section*{Data and code availability}
+
+The public repository contains the deidentified respondent-level analysis files for all five experiments, the complete analysis code, source manifests with checksums, recode and join ledgers, tests, and generated exhibits. The released files are minimized at construction: they carry only the columns the analysis consumes, replace the FFRISP design codes with anonymized ranks, and use deterministic sequential case identifiers that reproduce from the sources without linking to any panel identifier. Raw survey and panel exports contain IP addresses, respondent or panel identifiers, ZIP codes, user-agent strings, and open text, so they remain in a restricted source directory; the published manifests allow an authorized copy to be verified by checksum, and the pipeline reruns all analyses from the released files when the raw exports are absent. The open-ended response text is likewise restricted; only aggregate coding-reliability results are released.
+
+\printbibliography
+
+\clearpage
+\appendix
+\setcounter{table}{0}
+\renewcommand{\thetable}{SI\arabic{table}}
+\renewcommand{\theHtable}{SI\arabic{table}}
+\section{Fieldwork and sample construction}
+
+\subsection{FFRISP recruitment and retention}
+
+The archived final methodology report identifies Abt SRBI as the organization responsible for sampling, recruitment, panel maintenance, respondent support, and most survey administration \parencite{ackermann2009ffrisp}. The weighting section reports 3,723 sampled addresses, whereas the fieldwork disposition section reports 3,184 worked cases. The surviving records do not reconcile those denominators, so we do not calculate a recruitment response rate from them. The report does establish that 1,145 eligible adults were selected, 1,000 enrolled, and 902 completed the final monthly survey.
+
+Monthly invitations began by email. Abt SRBI followed nonrespondents by email and telephone for up to two weeks, then by post. Table~\ref{tab:ffrisp-retention} shows the resulting wave counts.
+
+\input{../tabs/ffrisp_retention.tex}
+
+\subsection{Analysis flow and condition allocation}
+
+Tables~\ref{tab:sample-flow} and \ref{tab:condition-counts} show every analytical restriction and the number of completed and analyzed respondents in each frame. The six missing Luth outcomes among attention-check passers occur in the defective pair, so outcome missingness does not further reduce the valid-pair primary sample.
+
+\input{../tabs/sample_flow.tex}
+
+\input{../tabs/condition_counts.tex}
+
+\subsection{Per-survey estimates}
+
+Table~\ref{tab:effects} reports the same 2009 framing contrasts as Table~\ref{tab:family-effects}, grouped by survey rather than by manipulation.
+
+\input{../tabs/main_effects.tex}
+
+\subsection{Deployed and reconstructed treatment text}
+
+Table~\ref{tab:wording-inventory} crosswalks every deployed gain-loss pair and 2018 design cell using the same condition labels as the results exhibits. The scenario stem is the standard 600-person disease problem unless the table identifies the expanded drug scenario. ``Success outcome first'' means that the risky option states the one-third all-survive outcome before the two-thirds none-survive outcome; ``failure outcome first'' reverses those clauses. This inventory preserves distinctions that the compact results table necessarily suppresses.
+
+Table~\ref{tab:verbatim-wording} reports the treatment text itself, graded by its evidentiary status. The FFRISP rows quote the archived deployed item text verbatim. The Luth rows are reconstructed from the archived draft descriptions and checked against the deployed questionnaire PDFs; the deployed September questionnaire, not the corrected November revision, is the record of what respondents saw. The 2018 rows are functional descriptions from the recorded factor coding, corroborated for every respondent by the Qualtrics block-assignment labels in the Stanford exports, because the fielded text is unavailable.
+
+\begin{landscape}
+\begingroup
+\setlength{\tabcolsep}{3.5pt}
+\input{../tabs/wording_inventory.tex}
+\endgroup
+
+\begingroup
+\setlength{\tabcolsep}{3.5pt}
+\input{../tabs/verbatim_wording.tex}
+\endgroup
+\end{landscape}
+
+\clearpage
+\section{Weighting, sensitivity, and exploratory moderation}
+
+FFRISP base weights adjusted for unequal household selection probabilities, screener nonresponse, within-household adult selection, panel nonenrollment, and population coverage. The report documents calibration to 2007 American Community Survey margins for tenure, children, household size, age, gender, Hispanic ethnicity, race, and education. It also documents trimming and raking for wave 1. The archived weight file contains variables for all 12 waves, including the month 12 weight used below, but the archive contains no corresponding month 12 production memo.
+
+\input{../tabs/sensitivity_effects.tex}
+
+\input{../tabs/moderator_interactions.tex}
+
+\clearpage
+\section{2018 factorial experiments and archive-wide synthesis}
+
+\subsection{Source reconstruction}
+
+Table~\ref{tab:sample-flow} reports the source-to-analysis flow for all three 2018 study exports. The received anonymous file orders the Stanford replication first, the Stanford discovery second, and the UCSB replication third. Its first 4,589 rows otherwise match that source-derived stack except at combined row 3,089, corresponding to Stanford discovery row 1,647: the source first choice is missing, whereas the combined value is zero. Row 4,590 is entirely blank. The source-first pipeline preserves the missing response and omits the blank row; the detailed discrepancy remains documented in the repository's source-flow artifact.
+
+\subsection{Study-specific and pooled framing contrasts}
+
+Figure~\ref{fig:protzko-effects} shows the twelve gain-minus-loss differences across the three 2018 experiments, and Table~\ref{tab:protzko-effects} reports the four design cells after pooling the three studies with study indicators. Every estimate is positive. Balanced-certain-option estimates are generally smaller, although the UCSB balanced cell with the internal flip is an exception; the pooled factorial interaction therefore summarizes an average change rather than a deterministic rule for every study and design cell.
+
+\input{../tabs/protzko_effects.tex}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.92\textwidth]{../figs/protzko_frame_effects.pdf}
+  \caption{Study-specific framing contrasts in the archived 2018 experiments. Points are gain-frame minus loss-frame differences in percentage points; horizontal lines are 95 percent confidence intervals based on HC2 standard errors. Each respondent contributes only the first recorded framing choice.}
+  \label{fig:protzko-effects}
+\end{figure}
+
+\subsection{Manipulation-effect synthesis}
+
+Table~\ref{tab:manipulation-meta} reports, for every deployed manipulation, the change in the framing contrast relative to the same survey's original wording. Manipulations fielded in several surveys are pooled with a random-effects model; single-survey manipulations report the one available within-survey difference. The reversal of the risky option's outcome order, fielded in all five surveys, does not change the contrast; the certain-option completeness manipulations reduce it in every survey that fielded them, with the UCSB balanced-plus-flip cell as the one exception.
+
+\input{../meta/tables/manipulation_meta.tex}
+
+\subsection{Archive-wide forest plot}
+
+Figure~\ref{fig:archive-meta} displays every independent contrast in the separate synthesis module. The red vertical line is the random-effects mean and the shaded band is its 95 percent confidence interval. The band describes uncertainty about the average; the wider prediction interval reported in Table~\ref{tab:archive-meta} describes expected between-contrast variation.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.82\textwidth]{../meta/figures/archive_meta_forest.pdf}
+  \caption{Archive-wide forest plot, grouped by manipulation family. Points are gain-frame minus loss-frame differences in choosing the certain option; horizontal lines are 95 percent confidence intervals. The red line and shaded band show the REML random-effects mean and its 95 percent confidence interval. The synthesis covers the available archive, not the published literature.}
+  \label{fig:archive-meta}
+\end{figure}
+
+\clearpage
+\section{Audit of the open-ended coding}
+
+The Luth instrument asked respondents to explain their choices. A later coding project assigned up to two of eight categories: no stated reason; equal expected value; certainty or risk aversion; a chance that everyone survives; saving more people; ease of understanding; other; or a claim that one option was better without a reason. The workbook contains 2,330 substantive rows and one blank trailing row. Anne and Jeremy both supplied valid primary codes for 2,295 responses.
+
+We audit the independent codes and do not use the workbook's reconciled ``True Score.'' The archive does not document a reproducible adjudication algorithm. A contemporaneous memo also notes overlap among certainty, chance, and number-saved categories; ambiguity between no reason and other; and inconsistent use of the better-choice category. Table~\ref{tab:open-ended-reliability} reports overall agreement. Table~\ref{tab:open-ended-categories} shows that reliability varies across categories, especially for rare or overlapping codes. No open-ended response text is reproduced or exported by the pipeline.
+
+\input{../tabs/open_ended_reliability.tex}
+
+\input{../tabs/open_ended_category_reliability.tex}
+
+These codes describe how two coders classified post-choice explanations. We use the primary codes descriptively to ask whether the distribution of stated reasons differs between gain and loss frames, adjusting for wording pair. The frame comparisons are not a second outcome and do not establish a psychological mechanism; respondents' explanations may be retrospective rationalizations. The results show whether the explanations add information about how respondents represented the options, while preserving the coding audit's uncertainty.
+
+\input{../tabs/open_ended_frame_effects.tex}
+
+The most common coded explanations were a chance that everyone survives, certainty or risk aversion, and saving more people. Their frame differences were small relative to their uncertainty, and no category survives Holm adjustment. The open-ended material therefore complements the choice results by documenting respondents' stated representations without turning retrospective explanations into evidence for a single mechanism.
+
+\end{document}

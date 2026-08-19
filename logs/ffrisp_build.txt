@@ -1,0 +1,7 @@
+raw survey rows: 914
+completed rows: 902
+analysis rows with numeric panel ID: 898
+profile matches: 898
+month 12 weight matches: 896
+month 12 weight missing: 2
+framing outcome missing: 11

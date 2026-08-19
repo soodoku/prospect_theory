@@ -1,0 +1,8 @@
+raw survey rows: 2330
+completed experiment rows retained: 2330
+attention-check analysis sample: 2017
+demographic matches: 2065
+political-survey matches: 2327
+completed political-survey matches: 2069
+invalid natural-frequency pair rows: 280
+condition 8 is invalid because the deployed stem names Programs C and D while its response options name Programs A and B

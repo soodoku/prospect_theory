@@ -1,0 +1,11 @@
+source rows: 4589
+source-derived complete cases: 4585
+source-derived missing choices: 4
+received combined rows: 4590
+received combined complete cases: 4586
+received combined trailing blank rows: 1
+received combined cell differences from source-derived stack: 1
+difference: row 3089 certain choice is missing in source and zero in combined
+Stanford discovery: 1647 block-order labels agree with derived arm and frame coding
+Stanford replication: 1442 block-order labels agree with derived arm and frame coding
+UCSB replication: 1500 precomputed interaction columns agree with derived factor coding

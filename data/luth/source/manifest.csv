@@ -1,0 +1,6 @@
+file,sha256,bytes,role
+luth1024.csv,cd707f57fe9e4e309f07af407efbe3ca809be1480ead1dadb2a307500ffe2d69,556748,experiment responses
+dem.luth.sav,0c4cb7a4bef9a5247fba627f2c86953cbeee4b0b2f275affb13d01f627bcd3ab,997092,demographic survey
+party.luth.sav,a4bed659c2f9daa57554711cf0a787709de9b089df5d5e51bf75f8eb738b2981,6317416,political survey and knowledge items
+luth.gs.survey.pdf,ffadc55763bd9c383f2373ce7a0dced0d879f4e5a3beaa3fcd46d646024bc708,100118,deployed questionnaire with condition 8 wording error
+luth.survey.pdf,a2e716eccbeb801d7e34904e6ff7fc22f77f9cc8ec664fc13876d1519dbaaa69,101882,corrected questionnaire rendering

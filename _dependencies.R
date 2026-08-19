@@ -1,0 +1,2 @@
+library(lintr)
+library(metafor)

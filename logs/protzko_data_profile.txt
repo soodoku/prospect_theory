@@ -1,0 +1,939 @@
+Protzko source-data profile
+Generated: 2026-08-19 06:25:18 UTC
+Raw identifiers and quasi-identifiers are not printed.
+
+============================================================
+FILE: StanfordProspectwithinsubjects2x2.dta 
+SHAPE: 1647 rows x 64 columns
+
+FIRST SIX ROWS, ANALYSIS FIELDS (RAW VALUES)
+ q1857 q1865 q1859 q1867 q1861 q1869 q1863 q1871 certain1st certain2nd
+     1     0    NA    NA    NA    NA    NA    NA          1          0
+     1     0    NA    NA    NA    NA    NA    NA          1          0
+     1     1    NA    NA    NA    NA    NA    NA          1          1
+     0     0    NA    NA    NA    NA    NA    NA          0          0
+     1     0    NA    NA    NA    NA    NA    NA          1          0
+     1     0    NA    NA    NA    NA    NA    NA          1          0
+ gainframe1st flip explicit qualified duration
+            1    0        0         1  8.05000
+            1    0        0         1 23.36667
+            1    0        0         1 11.83333
+            1    0        0         1 20.66667
+            1    0        0         1 23.71667
+            1    0        0         1 19.58333
+
+LAST SIX ROWS, ANALYSIS FIELDS (RAW VALUES)
+ q1857 q1865 q1859 q1867 q1861 q1869 q1863 q1871 certain1st certain2nd
+    NA    NA    NA    NA    NA    NA     0     0          0          0
+    NA    NA    NA    NA    NA    NA     0     0          0          0
+    NA    NA    NA    NA    NA    NA     0     0          0          0
+    NA    NA    NA    NA    NA    NA     0     0          0          0
+    NA    NA    NA    NA    NA    NA     1     0          0          1
+    NA    NA    NA    NA    NA    NA     1   -99         NA          1
+ gainframe1st flip explicit qualified  duration
+            0    1        1         1 25.000000
+            0    1        1         1 16.183332
+            0    1        1         1 43.333332
+            0    1        1         1  7.500000
+            0    1        1         1 17.483334
+            0    1        1         1  5.316667
+
+VARIABLE PROFILE
+            variable   storage           label n_missing pct_missing n_distinct
+                  v1 character              V1         0   0.0000000       1647
+                  v2 character              V2         0   0.0000000          1
+                  v3 character              V3         0   0.0000000          1
+                  v4   numeric              V4      1647 100.0000000          0
+                  v5   numeric              V5      1647 100.0000000          0
+                  v6 character              V6         0   0.0000000       1641
+                  v7   numeric              V7         0   0.0000000          1
+                  v8 character              V8         0   0.0000000       1546
+                  v9 character              V9         0   0.0000000       1550
+                 v10   numeric             V10         0   0.0000000          1
+           useragent character       UserAgent         0   0.0000000        624
+     q_totalduration   numeric Q_TotalDuration         0   0.0000000        987
+     q_terminateflag character Q_TerminateFlag         0   0.0000000          2
+              random character                         0   0.0000000          4
+                psid character                         0   0.0000000       1638
+                 pid   numeric             PID         0   0.0000000       1638
+                  ad   numeric              AD         0   0.0000000          1
+             ad_tm_1   numeric         AD_tm_1         0   0.0000000       1518
+             ad_tm_2   numeric         AD_tm_2         0   0.0000000       1539
+             ad_tm_3   numeric         AD_tm_3         0   0.0000000       1528
+             ad_tm_4   numeric         AD_tm_4         0   0.0000000         14
+      answeredbefore   numeric                         0   0.0000000          1
+ answeredbefore_tm_1   numeric                         0   0.0000000       1555
+ answeredbefore_tm_2   numeric                         0   0.0000000       1542
+ answeredbefore_tm_3   numeric                         0   0.0000000       1561
+ answeredbefore_tm_4   numeric                         0   0.0000000         11
+         timesbefore   numeric                      1647 100.0000000          0
+    timesbefore_tm_1   numeric                      1647 100.0000000          0
+    timesbefore_tm_2   numeric                      1647 100.0000000          0
+    timesbefore_tm_3   numeric                      1647 100.0000000          0
+    timesbefore_tm_4   numeric                      1647 100.0000000          0
+               q1857   numeric           Q1857      1219  74.0133576          2
+               q1865   numeric           Q1865      1219  74.0133576          2
+               q1859   numeric           Q1859      1233  74.8633880          2
+               q1867   numeric           Q1867      1233  74.8633880          3
+               q1861   numeric           Q1861      1244  75.5312690          2
+               q1869   numeric           Q1869      1244  75.5312690          2
+               q1863   numeric           Q1863      1245  75.5919854          2
+               q1871   numeric           Q1871      1245  75.5919854          3
+          certain1st   numeric                         2   0.1214329          2
+          certain2nd   numeric                         0   0.0000000          2
+        gainframe1st   numeric                         0   0.0000000          2
+                flip   numeric                         0   0.0000000          2
+            explicit   numeric                         0   0.0000000          2
+          dobrfl_271 character    DO-BR-FL_271         0   0.0000000          3
+          dobrfl_268 character    DO-BR-FL_268         0   0.0000000          3
+          dobrfl_265 character    DO-BR-FL_265         0   0.0000000          3
+          dobrfl_262 character    DO-BR-FL_262         0   0.0000000          3
+              female   numeric                         0   0.0000000          2
+           education   numeric                         0   0.0000000         15
+           birthyear   numeric                         0   0.0000000         70
+            hispanic   numeric                         0   0.0000000          3
+              race_1   numeric                         0   0.0000000          3
+              race_2   numeric                         0   0.0000000          3
+              race_3   numeric                         0   0.0000000          3
+              race_4   numeric                         0   0.0000000          3
+              race_5   numeric                         0   0.0000000          3
+              race_6   numeric                         0   0.0000000          3
+              income   numeric                         0   0.0000000          2
+          incomeless   numeric                       919  55.7984214          6
+          incomemore   numeric                       728  44.2015786          5
+             zipcode   numeric                         2   0.1214329       1499
+            duration   numeric                         0   0.0000000        987
+           qualified   numeric                         0   0.0000000          1
+          minimum          maximum
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                0                0
+                                  
+                                  
+                1                1
+                                  
+              213             3436
+                                  
+                                  
+                                  
+       1073552977       1445192048
+                9                9
+                0   1024.083984375
+                0  1026.5830078125
+             1.75 1027.45397949219
+                0               16
+                2                2
+                0 572.546997070312
+                0 572.617980957031
+ 1.40400004386902 573.966003417969
+                0               12
+                                  
+                                  
+                                  
+                                  
+                                  
+                0                1
+                0                1
+                0                1
+              -99                1
+                0                1
+                0                1
+                0                1
+              -99                1
+                0                1
+                0                1
+                0                1
+                0                1
+                0                1
+                                  
+                                  
+                                  
+                                  
+                1                2
+                2               16
+             1924             2000
+              -99                2
+              -99                1
+              -99                1
+              -99                1
+              -99                1
+              -99                1
+              -99                1
+                1                2
+              -99                5
+              -99                4
+             1129            99654
+ 3.54999995231628 57.2666664123535
+                1                1
+                                                                                                                                                                                                top_values
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                              1122 (6); 599 (6); 745 (6); 760 (6); 992 (6)
+                                                                                                                                                                                    (1460); Screened (187)
+                                                                                                                                                                    ["2"] (855); ["1"] (787); 2 (4); 1 (1)
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                                                  9 (1647)
+                                                                                                2.35800004005432 (3); 4.44500017166138 (3); 4.4980001449585 (3); 4.57600021362305 (3); 5.1100001335144 (3)
+                                                                                              6.87799978256226 (4); 4.57600021362305 (3); 4.70599985122681 (3); 5.72700023651123 (3); 5.89799976348877 (3)
+                                                                                               5.99599981307983 (4); 10.503999710083 (3); 5.00500011444092 (3); 5.14300012588501 (3); 6.09100008010864 (3)
+                                                                                                                                                                 1 (739); 2 (625); 3 (123); 4 (83); 5 (22)
+                                                                                                                                                                                                  2 (1647)
+                                                                                                              0 (3); 5.30200004577637 (3); 6.06799983978271 (3); 8.7170000076294 (3); 10.1590003967285 (2)
+                                                                                                              0 (3); 4.88700008392334 (3); 5.4539999961853 (3); 6.02600002288818 (3); 7.01399993896484 (3)
+                                                                                                6.5920000076294 (3); 7.6560001373291 (3); 7.67399978637695 (3); 8.19200038909912 (3); 8.47500038146973 (3)
+                                                                                                                                                                   1 (767); 2 (721); 3 (90); 4 (43); 5 (8)
+                                                                                                                                                                                                          
+                                                                                                                                                                                                          
+                                                                                                                                                                                                          
+                                                                                                                                                                                                          
+                                                                                                                                                                                                          
+                                                                                                                                                                                          1 (256); 0 (172)
+                                                                                                                                                                                          0 (269); 1 (159)
+                                                                                                                                                                                          1 (232); 0 (182)
+                                                                                                                                                                                 0 (278); 1 (135); -99 (1)
+                                                                                                                                                                                          1 (232); 0 (171)
+                                                                                                                                                                                          1 (231); 0 (172)
+                                                                                                                                                                                          0 (232); 1 (170)
+                                                                                                                                                                                 0 (221); 1 (180); -99 (1)
+                                                                                                                                                                                          1 (824); 0 (821)
+                                                                                                                                                                                          0 (876); 1 (771)
+                                                                                                                                                                                          1 (830); 0 (817)
+                                                                                                                                                                                          0 (831); 1 (816)
+                                                                                                                                                                                          0 (842); 1 (805)
+                                                                                      (1219); Original Wording - loss|Original Wording - gain (216); Original Wording - gain|Original Wording - loss (212)
+                                                                                                  (1233); Internal Flip - gain|Internal Flip - loss (213); Internal Flip - loss|Internal Flip - gain (201)
+                                                                              (1244); Explicit Balancing - loss|Explicit Balancing - gain (208); Explicit Balancing - gain|Explicit Balancing - loss (195)
+  (1245); Explicit Balancing plus Internal Flip - gain|Explicit Balancing plus Internal Flip - loss (210); Explicit Balancing plus Internal Flip - loss|Explicit Balancing plus Internal Flip - gain (192)
+                                                                                                                                                                                          2 (880); 1 (767)
+                                                                                                                                                           13 (408); 9 (396); 10 (323); 14 (161); 11 (109)
+                                                                                                                                                     1968 (47); 1986 (47); 1987 (47); 1963 (44); 1967 (43)
+                                                                                                                                                                                2 (1400); 1 (246); -99 (1)
+                                                                                                                                                                                1 (1219); 0 (427); -99 (1)
+                                                                                                                                                                                0 (1426); 1 (220); -99 (1)
+                                                                                                                                                                                 0 (1608); 1 (38); -99 (1)
+                                                                                                                                                                                0 (1511); 1 (135); -99 (1)
+                                                                                                                                                                                  0 (1640); 1 (6); -99 (1)
+                                                                                                                                                                                 0 (1561); 1 (85); -99 (1)
+                                                                                                                                                                                          2 (919); 1 (728)
+                                                                                                                                                               3 (167); 2 (155); 4 (150); 1 (131); 5 (124)
+                                                                                                                                                               3 (291); 1 (263); 2 (234); 4 (130); -99 (1)
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                               12.4166669845581 (6); 12.6666669845581 (6); 16.533332824707 (6); 18.7000007629395 (6); 9.98333358764648 (6)
+                                                                                                                                                                                                  1 (1647)
+
+============================================================
+FILE: StanfordProspectwithinsubjects2x2REPLICATE.dta 
+SHAPE: 1442 rows x 94 columns
+
+FIRST SIX ROWS, ANALYSIS FIELDS (RAW VALUES)
+ q1857 q1865 q1859 q1867 q1861 q1869 q1863 q1871 certain1st certain2nd
+     1     1    NA    NA    NA    NA    NA    NA          1          1
+     1     1    NA    NA    NA    NA    NA    NA          1          1
+     1     1    NA    NA    NA    NA    NA    NA          1          1
+     1     0    NA    NA    NA    NA    NA    NA          1          0
+     1     0    NA    NA    NA    NA    NA    NA          1          0
+     1     1    NA    NA    NA    NA    NA    NA          1          1
+ gainframe1st flip explicit qualified duration
+            1    0        0         1 17.71667
+            1    0        0         1 43.35000
+            1    0        0         1 18.93333
+            1    0        0         1 12.68333
+            1    0        0         1 14.23333
+            1    0        0         1 22.10000
+
+LAST SIX ROWS, ANALYSIS FIELDS (RAW VALUES)
+ q1857 q1865 q1859 q1867 q1861 q1869 q1863 q1871 certain1st certain2nd
+    NA    NA    NA    NA    NA    NA     0     0          0          0
+    NA    NA    NA    NA    NA    NA     0     1          1          0
+    NA    NA    NA    NA    NA    NA     1     1          1          1
+    NA    NA    NA    NA    NA    NA     1     1          1          1
+    NA    NA    NA    NA    NA    NA     0     0          0          0
+    NA    NA    NA    NA    NA    NA     0     0          0          0
+ gainframe1st flip explicit qualified duration
+            0    1        1         1 12.33333
+            0    1        1         1 14.40000
+            0    1        1         1 17.01667
+            0    1        1         1 34.96667
+            0    1        1         1 11.38333
+            0    1        1         1 10.66667
+
+VARIABLE PROFILE
+        variable   storage           label n_missing  pct_missing n_distinct
+              v1 character              V1         0   0.00000000       1442
+              v2 character              V2         0   0.00000000          1
+              v3 character              V3         0   0.00000000          1
+              v4   numeric              V4      1442 100.00000000          0
+              v5   numeric              V5      1442 100.00000000          0
+              v6 character              V6         0   0.00000000       1442
+              v7   numeric              V7         0   0.00000000          1
+              v8 character              V8         0   0.00000000       1372
+              v9 character              V9         0   0.00000000       1381
+             v10   numeric                         0   0.00000000          1
+       useragent character       UserAgent         0   0.00000000        564
+ q_totalduration   numeric Q_TotalDuration         0   0.00000000        913
+ q_terminateflag character Q_TerminateFlag         0   0.00000000          2
+          random character                         0   0.00000000          4
+            psid character                         0   0.00000000       1442
+             pid   numeric             PID         0   0.00000000       1442
+       doublepid character       doublePID         0   0.00000000          1
+           q1857   numeric           Q1857      1081  74.96532594          3
+           q1865   numeric           Q1865      1081  74.96532594          2
+           q1859   numeric           Q1859      1070  74.20249653          3
+           q1867   numeric           Q1867      1070  74.20249653          3
+           q1861   numeric           Q1861      1100  76.28294036          2
+           q1869   numeric           Q1869      1100  76.28294036          2
+           q1863   numeric           Q1863      1075  74.54923717          3
+           q1871   numeric           Q1871      1075  74.54923717          2
+      certain1st   numeric                         0   0.00000000          3
+      certain2nd   numeric                         0   0.00000000          3
+    gainframe1st   numeric                         0   0.00000000          2
+            flip   numeric                         0   0.00000000          2
+        explicit   numeric                         0   0.00000000          2
+      dobrfl_129 character    DO-BR-FL_129         0   0.00000000          3
+      dobrfl_130 character    DO-BR-FL_130         0   0.00000000          3
+      dobrfl_131 character    DO-BR-FL_131         0   0.00000000          3
+      dobrfl_132 character    DO-BR-FL_132         0   0.00000000          3
+          female   numeric                         0   0.00000000          2
+     female_tm_1   numeric                         0   0.00000000       1025
+     female_tm_2   numeric                         0   0.00000000       1058
+     female_tm_3   numeric                         0   0.00000000       1174
+     female_tm_4   numeric                         0   0.00000000          9
+         married   numeric                         0   0.00000000          5
+    married_tm_1   numeric                         0   0.00000000       1150
+    married_tm_2   numeric                         0   0.00000000       1184
+    married_tm_3   numeric                         0   0.00000000       1231
+    married_tm_4   numeric                         0   0.00000000         10
+       education   numeric                         0   0.00000000         14
+  education_tm_1   numeric                         0   0.00000000       1282
+  education_tm_2   numeric                         0   0.00000000       1328
+  education_tm_3   numeric                         0   0.00000000       1348
+  education_tm_4   numeric                         0   0.00000000         17
+       birthyear   numeric                         1   0.06934813         68
+  birthyear_tm_1   numeric                         0   0.00000000       1019
+  birthyear_tm_2   numeric                         0   0.00000000       1098
+  birthyear_tm_3   numeric                         0   0.00000000       1313
+  birthyear_tm_4   numeric                         0   0.00000000         12
+      birthmonth   numeric                         0   0.00000000         13
+ birthmonth_tm_1   numeric                         0   0.00000000       1082
+ birthmonth_tm_2   numeric                         0   0.00000000       1222
+ birthmonth_tm_3   numeric                         0   0.00000000       1247
+ birthmonth_tm_4   numeric                         0   0.00000000         11
+        hispanic   numeric                         0   0.00000000          2
+   hispanic_tm_1   numeric                         0   0.00000000       1042
+   hispanic_tm_2   numeric                         0   0.00000000       1079
+   hispanic_tm_3   numeric                         0   0.00000000       1197
+   hispanic_tm_4   numeric                         0   0.00000000          8
+          race_1   numeric                         0   0.00000000          2
+          race_2   numeric                         0   0.00000000          2
+          race_3   numeric                         0   0.00000000          2
+          race_4   numeric                         0   0.00000000          2
+          race_5   numeric                         0   0.00000000          2
+          race_6   numeric                         0   0.00000000          2
+       race_tm_1   numeric                         0   0.00000000       1144
+       race_tm_2   numeric                         0   0.00000000       1183
+       race_tm_3   numeric                         0   0.00000000       1250
+       race_tm_4   numeric                         0   0.00000000         13
+          income   numeric                         0   0.00000000          2
+     income_tm_1   numeric                         0   0.00000000       1305
+     income_tm_2   numeric                         0   0.00000000       1342
+     income_tm_3   numeric                         0   0.00000000       1367
+     income_tm_4   numeric                         0   0.00000000          8
+      incomeless   numeric                       811  56.24133148          5
+ incomeless_tm_1   numeric                       811  56.24133148        619
+ incomeless_tm_2   numeric                       811  56.24133148        613
+ incomeless_tm_3   numeric                       811  56.24133148        616
+ incomeless_tm_4   numeric                       811  56.24133148         10
+      incomemore   numeric                       631  43.75866852          4
+ incomemore_tm_1   numeric                       631  43.75866852        763
+ incomemore_tm_2   numeric                       631  43.75866852        756
+ incomemore_tm_3   numeric                       631  43.75866852        786
+ incomemore_tm_4   numeric                       631  43.75866852          8
+         zipcode   numeric                         1   0.06934813       1339
+          piddup   numeric                         0   0.00000000          1
+         psiddup   numeric                         0   0.00000000          1
+       qualified   numeric                         0   0.00000000          1
+        duration   numeric                         0   0.00000000        913
+             minimum          maximum
+                                     
+                                     
+                                     
+                                     
+                                     
+                                     
+                   0                0
+                                     
+                                     
+                   1                1
+                                     
+                 272             3572
+                                     
+                                     
+                                     
+          1073965853       1445352624
+                                     
+                 -99                1
+                   0                1
+                 -99                1
+                 -99                1
+                   0                1
+                   0                1
+                 -99                1
+                   0                1
+                 -99                1
+                 -99                1
+                   0                1
+                   0                1
+                   0                1
+                                     
+                                     
+                                     
+                                     
+                   1                2
+                   0 71.8870010375977
+                   0 72.4459991455078
+   0.852999985218048 72.7819976806641
+                   0               19
+                   1                5
+                   0 287.037994384766
+                   0 287.037994384766
+   0.998000025749207 287.717987060547
+                   0               10
+                   2               16
+                   0 556.835021972656
+                   0 556.835021972656
+    1.75199997425079 557.578002929688
+                   0               20
+                1928             2000
+                   0  103.41300201416
+                   0  103.41300201416
+    1.66400003433228 295.930999755859
+                   0               12
+                 -99               12
+                   0 62.7820014953613
+                   0 75.8850021362305
+    1.46099996566772 76.5039978027344
+                   0               10
+                   1                2
+                   0 200.007995605469
+                   0 200.007995605469
+   0.824999988079071 200.783996582031
+                   0                8
+                   0                1
+                   0                1
+                   0                1
+                   0                1
+                   0                1
+                   0                1
+                   0 388.438995361328
+                   0 388.821990966797
+   0.973999977111816 390.029998779297
+                   0               22
+                   1                2
+                   0 234.483001708984
+                   0 234.863006591797
+   0.879000008106232 236.110000610352
+                   0                7
+                   1                5
+ 0.00700000021606684 107.976997375488
+   0.216000005602837 107.995002746582
+   0.883000016212463 157.822998046875
+                   1               17
+                   1                4
+                   0 435.697998046875
+                   0 435.697998046875
+    1.37899994850159 437.800994873047
+                   0               10
+                1075            99801
+                   0                0
+                   0                0
+                   1                1
+    4.53333330154419  59.533332824707
+                                                                                                                                                                                                top_values
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                               657 (6); 787 (6); 843 (6); 866 (6); 878 (6)
+                                                                                                                                                                                    (1304); Screened (138)
+                                                                                                                                                                  ["2"] (692); ["1"] (685); 2 (40); 1 (25)
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                                              FALSE (1442)
+                                                                                                                                                                                 1 (216); 0 (144); -99 (1)
+                                                                                                                                                                                          0 (202); 1 (159)
+                                                                                                                                                                                 1 (208); 0 (163); -99 (1)
+                                                                                                                                                                                 0 (227); 1 (144); -99 (1)
+                                                                                                                                                                                          1 (180); 0 (162)
+                                                                                                                                                                                          0 (177); 1 (165)
+                                                                                                                                                                                 0 (190); 1 (176); -99 (1)
+                                                                                                                                                                                          0 (197); 1 (170)
+                                                                                                                                                                                 1 (727); 0 (713); -99 (2)
+                                                                                                                                                                                 0 (749); 1 (691); -99 (2)
+                                                                                                                                                                                          1 (735); 0 (707)
+                                                                                                                                                                                          1 (739); 0 (703)
+                                                                                                                                                                                          0 (733); 1 (709)
+                                                                          (1081); original wording - loss|Original Wording - gain frame (182); Original Wording - gain frame|original wording - loss (179)
+                                                                                                  (1070); internal flip - gain|internal flip - loss (200); internal flip - loss|internal flip - gain (172)
+                                                                            (1100); Excplicit balancing - gain|Explicit balancing - loss (173); Explicit balancing - loss|Excplicit balancing - gain (169)
+  (1075); explicit balancing plus internal flip - loss|explicit balancing plus internal flip - gain (184); explicit balancing plus internal flip - gain|explicit balancing plus internal flip - loss (183)
+                                                                                                                                                                                          2 (848); 1 (594)
+                                                                                                       1.15100002288818 (6); 0.966000020503998 (5); 0.971000015735626 (5); 1.125 (5); 1.18499994277954 (5)
+                                                                                                1.19099998474121 (5); 1.3309999704361 (5); 1.00899994373322 (4); 1.2059999704361 (4); 1.22200000286102 (4)
+                                                                                              1.44799995422363 (4); 1.53400003910065 (4); 1.66700005531311 (4); 1.92599999904633 (4); 2.78600001335144 (4)
+                                                                                                                                                                   2 (726); 1 (623); 3 (64); 4 (20); 0 (3)
+                                                                                                                                                                 1 (757); 5 (464); 3 (135); 2 (43); 4 (43)
+                                                                                            0.964999973773956 (5); 0.78600001335144 (4); 0.869000017642975 (4); 1.21700000762939 (4); 1.24199998378754 (4)
+                                                                                             0.996999979019165 (4); 1.27900004386902 (4); 1.34399998188019 (4); 1.44900000095367 (4); 1.66100001335144 (4)
+                                                                                              2.01099991798401 (4); 2.81200003623962 (4); 3.35199999809265 (4); 1.56700003147125 (3); 1.87699997425079 (3)
+                                                                                                                                                                  2 (659); 1 (623); 3 (100); 4 (40); 5 (7)
+                                                                                                                                                           9 (348); 13 (326); 10 (249); 14 (158); 11 (102)
+                                                                                               1.70500004291534 (3); 1.7610000371933 (3); 2.04099988937378 (3); 2.14299988746643 (3); 2.17199993133545 (3)
+                                                                                              3.00999999046326 (4); 2.98699998855591 (3); 3.31900000572205 (3); 3.62599992752075 (3); 3.77300000190735 (3)
+                                                                                                3.98099994659424 (4); 6.3420000076294 (4); 4.61700010299683 (3); 5.3730001449585 (3); 5.84899997711182 (3)
+                                                                                                                                                               1 (546); 4 (258); 5 (186); 2 (148); 3 (131)
+                                                                                                                                                     1985 (47); 1984 (46); 1970 (42); 1971 (41); 1986 (40)
+                                                                                              1.2960000038147 (6); 1.00800001621246 (5); 1.16700005531311 (5); 1.26499998569489 (5); 0.878000020980835 (4)
+                                                                                              1.04499995708466 (5); 1.41700005531311 (5); 1.12899994850159 (4); 1.25100004673004 (4); 1.28400003910065 (4)
+                                                                                              3.60400009155273 (3); 4.98600006103516 (3); 5.07600021362305 (3); 5.13399982452393 (3); 5.67399978637695 (3)
+                                                                                                                                                                  2 (744); 1 (557); 3 (78); 4 (35); 6 (11)
+                                                                                                                                                             8 (141); 12 (134); 11 (132); 9 (127); 1 (124)
+                                                                                              1.06400001049042 (5); 1.2960000038147 (5); 0.853999972343445 (4); 1.17599999904633 (4); 1.24100005626678 (4)
+                                                                                                             1.13800001144409 (4); 1.442999958992 (4); 0.925000011920929 (3); 0.936999976634979 (3); 1 (3)
+                                                                                              3.71099996566772 (4); 3.74900007247925 (4); 3.77699995040894 (4); 4.16800022125244 (4); 3.15499997138977 (3)
+                                                                                                                                                                  2 (1183); 3 (115); 1 (69); 4 (51); 6 (9)
+                                                                                                                                                                                         2 (1197); 1 (245)
+                                                                                                1.03799998760223 (6); 1.30299997329712 (6); 1.61300003528595 (6); 0.97299998998642 (5); 1.307000041008 (5)
+                                                                                                             1.12399995326996 (5); 1.21700000762939 (5); 1.35699999332428 (5); 1.73699998855591 (5); 0 (4)
+                                                                                              2.04999995231628 (5); 2.25500011444092 (4); 2.31399989128113 (4); 2.45799994468689 (4); 1.59099996089935 (3)
+                                                                                                                                                                   2 (703); 1 (627); 3 (76); 4 (25); 0 (4)
+                                                                                                                                                                                         1 (1040); 0 (402)
+                                                                                                                                                                                         0 (1244); 1 (198)
+                                                                                                                                                                                          0 (1415); 1 (27)
+                                                                                                                                                                                         0 (1305); 1 (137)
+                                                                                                                                                                                          0 (1431); 1 (11)
+                                                                                                                                                                                          0 (1363); 1 (79)
+                                                                                            0.912999987602234 (5); 1.36699998378754 (5); 0.857999980449677 (4); 1.04799997806549 (4); 1.05900001525879 (4)
+                                                                                           1.63499999046326 (7); 0.871999979019165 (5); 1.19099998474121 (5); 0.782000005245209 (4); 0.925999999046326 (4)
+                                                                                               1.83899998664856 (4); 2.13700008392334 (4); 2.24300003051758 (4); 1.70099997520447 (3); 1.7039999961853 (3)
+                                                                                                                                                                 2 (627); 1 (620); 3 (113); 4 (34); 6 (18)
+                                                                                                                                                                                          2 (811); 1 (631)
+                                                                                              2.10999989509583 (4); 2.21399998664856 (4); 1.13900005817413 (3); 1.56200003623962 (3); 1.67700004577637 (3)
+                                                                                              1.20299994945526 (3); 2.03800010681152 (3); 2.25999999046326 (3); 3.42400002479553 (3); 3.67300009727478 (3)
+                                                                                              2.29699993133545 (3); 2.76200008392334 (3); 1.80900001525879 (2); 1.87100005149841 (2); 2.04399991035461 (2)
+                                                                                                                                                                 1 (614); 2 (609); 3 (134); 4 (50); 5 (19)
+                                                                                                                                                               3 (136); 1 (134); 4 (131); 2 (123); 5 (107)
+                                                                                              1.02499997615814 (2); 1.07400000095367 (2); 1.22300004959106 (2); 1.56299996376038 (2); 1.77300000190735 (2)
+                                                                                                1.40100002288818 (2); 1.45000004768372 (2); 1.45700001716614 (2); 1.56299996376038 (2); 1.817999958992 (2)
+                                                                                              10.1079998016357 (2); 2.06800007820129 (2); 2.43600010871887 (2); 3.02900004386902 (2); 3.58999991416931 (2)
+                                                                                                                                                                  2 (302); 1 (223); 3 (53); 4 (32); 5 (10)
+                                                                                                                                                                         1 (266); 3 (242); 2 (213); 4 (90)
+                                                                                                                             2 (3); 2.36199998855591 (3); 0 (2); 1.1139999628067 (2); 1.13699996471405 (2)
+                                                                                                             2.00699996948242 (3); 2.36199998855591 (3); 2.49600005149841 (3); 0 (2); 1.13699996471405 (2)
+                                                                                              11.3149995803833 (2); 2.12199997901917 (2); 2.33200001716614 (2); 2.57399988174438 (2); 2.80999994277954 (2)
+                                                                                                                                                                   1 (378); 2 (337); 3 (55); 4 (30); 5 (6)
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                                                  0 (1442)
+                                                                                                                                                                  withheld: identifier or quasi-identifier
+                                                                                                                                                                                                  1 (1442)
+                                                                                              10.9499998092651 (6); 13.1166667938232 (6); 14.0500001907349 (6); 14.4333333969116 (6); 14.6333332061768 (6)
+
+============================================================
+FILE: UCSBreplicateexplicitbalance.dta 
+SHAPE: 1500 rows x 76 columns
+
+FIRST SIX ROWS, ANALYSIS FIELDS (RAW VALUES)
+ certain certaincc certaince certainec certainee gainframe flip explicit
+       1        NA        NA         1        NA         0    0        1
+       1        NA        NA         1        NA         0    0        1
+       1        NA        NA         1        NA         0    0        1
+       1        NA        NA         1        NA         0    0        1
+       1        NA        NA         1        NA         0    0        1
+       1        NA        NA         1        NA         0    0        1
+ gainflip gainbal gainflbal age Duration__in_seconds_
+        0       0         0  39                  1035
+        0       0         0  37                   666
+        0       0         0  33                   998
+        0       0         0  48                  5040
+        0       0         0  47                   912
+        0       0         0  58                  1086
+
+LAST SIX ROWS, ANALYSIS FIELDS (RAW VALUES)
+ certain certaincc certaince certainec certainee gainframe flip explicit
+       0        NA        NA        NA         0         0    1        1
+       0        NA        NA        NA         0         0    1        1
+       0        NA        NA        NA         0         0    1        1
+       0        NA        NA        NA         0         0    1        1
+       0        NA        NA        NA         0         0    1        1
+       0        NA        NA        NA         0         0    1        1
+ gainflip gainbal gainflbal age Duration__in_seconds_
+        0       0         0  45                   599
+        0       0         0  38                   438
+        0       0         0  39                  1225
+        0       0         0  38                  1426
+        0       0         0  31                  1411
+        0       0         0  32                  1322
+
+VARIABLE PROFILE
+                         variable                          storage
+                        StartDate                             Date
+                          EndDate                             Date
+                           Status haven_labelled/vctrs_vctr/double
+                        IPAddress                        character
+                         Progress                          numeric
+            Duration__in_seconds_                          numeric
+                         Finished haven_labelled/vctrs_vctr/double
+                     RecordedDate                             Date
+                       ResponseId                        character
+                             Q140 haven_labelled/vctrs_vctr/double
+                          certain                          numeric
+                        certaincc haven_labelled/vctrs_vctr/double
+                        certaince haven_labelled/vctrs_vctr/double
+                        certainec haven_labelled/vctrs_vctr/double
+                        certainee haven_labelled/vctrs_vctr/double
+                     conservative haven_labelled/vctrs_vctr/double
+                           female                          numeric
+                             Q473 haven_labelled/vctrs_vctr/double
+                        education                          numeric
+                             year                          numeric
+                             Q479 haven_labelled/vctrs_vctr/double
+                         hispanic                          numeric
+                            white                          numeric
+                            black                          numeric
+                           Q483_3 haven_labelled/vctrs_vctr/double
+                           Q483_4 haven_labelled/vctrs_vctr/double
+                           Q483_5 haven_labelled/vctrs_vctr/double
+                            other                          numeric
+                             Q485 haven_labelled/vctrs_vctr/double
+                        lowincome haven_labelled/vctrs_vctr/double
+                       highincome                          numeric
+                             Q491                        character
+                          zipcode                          numeric
+                             Q493 haven_labelled/vctrs_vctr/double
+                             Q455 haven_labelled/vctrs_vctr/double
+                             Q457                        character
+                             Q459                        character
+                             Q461 haven_labelled/vctrs_vctr/double
+                           Q463_1                          numeric
+                             Q465                        character
+                              sid                        character
+                        gainframe                          numeric
+                             flip                          numeric
+                         explicit                          numeric
+           ControlControl_DO_Q269                          numeric
+      ControlControl_DO_certaincc                          numeric
+ ControlControl_DO_controlcontrol                          numeric
+      ControlControl_DO_gainframe                          numeric
+              ControlFlip_DO_Q406                          numeric
+       ControlFlip_DO_gainframece                          numeric
+              ControlFlip_DO_Q408                          numeric
+         ControlFlip_DO_certaince                          numeric
+ explicitbalancingcontrol_DO_Q411                          numeric
+ explicitbalancingcontrol_DO_Q412                          numeric
+ explicitbalancingcontrol_DO_cert                          numeric
+ explicitbalancingcontrol_DO_Q410                          numeric
+ explicitbalancingflip_DO_gainfra                          numeric
+    explicitbalancingflip_DO_Q416                          numeric
+ explicitbalancingflip_DO_certain                          numeric
+    explicitbalancingflip_DO_Q414                          numeric
+                              age                          numeric
+                           lesshs                          numeric
+                           hsgrad                          numeric
+                         somecoll                          numeric
+                          college                          numeric
+                          thirtyk                          numeric
+                          forty9k                          numeric
+                        seventy4k                          numeric
+                         ninety9k                          numeric
+                         hundredk                          numeric
+                        northeast                          numeric
+                          midwest                          numeric
+                            south                          numeric
+                         gainflip                          numeric
+                          gainbal                          numeric
+                        gainflbal                          numeric
+                                                                             label
+                                                                        Start Date
+                                                                          End Date
+                                                                     Response Type
+                                                                        IP Address
+                                                                          Progress
+                                                             Duration (in seconds)
+                                                                          Finished
+                                                                     Recorded Date
+                                                                       Response ID
+ INSTRUCTIONS:\nResearch Participant's Consent Form Principal Investigator: Dr. Jo
+                                                                                  
+                                        Which of the two programs would you favor?
+                                        Which of the two programs would you favor?
+                                        Which of the two programs would you favor?
+                                        Which of the two programs would you favor?
+                                               What is your political orientation?
+                                                         Are you a male or female?
+              Are you now married, widowed, divorced, separated, or never married?
+  What is the highest level of school you have completed or the highest degree you
+                                                       In what year were you born?
+                                                  During what month were you born?
+                                             Are you Spanish, Hispanic, or Latino?
+     Below please choose one or more races that you consider yourself to be: White
+  Below please choose one or more races that you consider yourself to be: Black or
+  Below please choose one or more races that you consider yourself to be: American
+     Below please choose one or more races that you consider yourself to be: Asian
+  Below please choose one or more races that you consider yourself to be: Native H
+  Below please choose one or more races that you consider yourself to be: Some oth
+  The next question is about the total income in 2016 for you and all members of y
+  And in which of the following groups was the total income of you and all members
+  And in which of the following groups was the total income of you and all members
+                                    What is your five digit zip code at your home?
+                                    What is your five digit zip code at your home?
+                 Did you complete this survey on a computer or on a mobile device?
+  Did you receive an email inviting you to answer this survey, or did you not rece
+    What is the name of the company that invited you to answer this questionnaire?
+                                How were you invited to answer this questionnaire?
+  To thank you for completing this questionnaire, will you receive cash, points th
+                       How much money will you be paid for completing this survey?
+                      How many points will you be paid for completing this survey?
+                                                                               sid
+                                                                                  
+                                                                                  
+                                                                                  
+                                              Control Control - Display Order Q269
+                                         Control Control - Display Order certaincc
+                                    Control Control - Display Order controlcontrol
+                                         Control Control - Display Order gainframe
+                                                 Control Flip - Display Order Q406
+                                          Control Flip - Display Order gainframece
+                                                 Control Flip - Display Order Q408
+                                            Control Flip - Display Order certaince
+                          explicit balancing control - Display Order Q411gainframe
+                                   explicit balancing control - Display Order Q412
+                              explicit balancing control - Display Order certainec
+                                   explicit balancing control - Display Order Q410
+                               explicit balancing flip - Display Order gainframeee
+                                      explicit balancing flip - Display Order Q416
+                                 explicit balancing flip - Display Order certainee
+                                      explicit balancing flip - Display Order Q414
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+ n_missing pct_missing n_distinct    minimum    maximum
+         1  0.06666667         10 2018-01-18 2018-01-27
+         0  0.00000000          9 2018-01-18 2018-01-27
+         0  0.00000000          1          0          0
+         0  0.00000000       1500                      
+         0  0.00000000          1        100        100
+         0  0.00000000        938        259     448567
+         0  0.00000000          1          1          1
+         0  0.00000000          9 2018-01-18 2018-01-27
+         0  0.00000000       1500                      
+         0  0.00000000          1          1          1
+         0  0.00000000          2          0          1
+      1122 74.80000000          2          0          1
+      1129 75.26666667          2          0          1
+      1123 74.86666667          2          0          1
+      1126 75.06666667          2          0          1
+         0  0.00000000          7          1          7
+         0  0.00000000          2          0          1
+         0  0.00000000          5          1          5
+         0  0.00000000         13          3         15
+         0  0.00000000         69       1925       1999
+         0  0.00000000         12          1         12
+         0  0.00000000          2          0          1
+       265 17.66666667          1          1          1
+      1345 89.66666667          1          1          1
+      1476 98.40000000          1          1          1
+      1417 94.46666667          1          1          1
+      1496 99.73333333          1          1          1
+      1466 97.73333333          1          1          1
+         0  0.00000000          3          1       9999
+       828 55.20000000          5          1          5
+       673 44.86666667          5          6       9999
+         0  0.00000000       1377                      
+         0  0.00000000       1377       1002      99344
+         0  0.00000000          2          1          2
+         0  0.00000000          2          1          2
+         0  0.00000000        209                      
+         0  0.00000000        463                      
+         0  0.00000000          4          1          4
+      1144 76.26666667         41          0     676770
+         0  0.00000000        103                      
+         0  0.00000000       1500                      
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+      1308 87.20000000          1          2          2
+      1122 74.80000000          1          3          3
+      1122 74.80000000          1          1          1
+      1314 87.60000000          1          2          2
+      1129 75.26666667          1          1          1
+      1314 87.60000000          1          2          2
+      1315 87.66666667          1          2          2
+      1129 75.26666667          1          3          3
+      1316 87.73333333          1          2          2
+      1307 87.13333333          1          2          2
+      1123 74.86666667          1          3          3
+      1123 74.86666667          1          1          1
+      1313 87.53333333          1          2          2
+      1313 87.53333333          1          2          2
+      1126 75.06666667          1          3          3
+      1126 75.06666667          1          1          1
+         0  0.00000000         69         18         92
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+         0  0.00000000          2          0          1
+                                                                             top_values
+ 2018-01-23 (479); 2018-01-18 (423); 2018-01-19 (194); 2018-01-22 (99); 2018-01-26 (85)
+ 2018-01-23 (481); 2018-01-18 (413); 2018-01-19 (202); 2018-01-22 (99); 2018-01-26 (85)
+                                                                               0 (1500)
+                                               withheld: identifier or quasi-identifier
+                                                                             100 (1500)
+                                           828 (7); 752 (6); 813 (6); 1038 (5); 451 (5)
+                                                                               1 (1500)
+ 2018-01-23 (481); 2018-01-18 (413); 2018-01-19 (202); 2018-01-22 (99); 2018-01-26 (85)
+                                               withheld: identifier or quasi-identifier
+                                                                               1 (1500)
+                                                                       0 (772); 1 (728)
+                                                                       1 (217); 0 (161)
+                                                                       1 (198); 0 (173)
+                                                                       0 (214); 1 (163)
+                                                                       0 (224); 1 (150)
+                                            4 (493); 6 (234); 5 (181); 3 (169); 7 (162)
+                                                                       1 (784); 0 (716)
+                                              1 (845); 5 (415); 3 (166); 2 (58); 4 (16)
+                                        12 (443); 10 (296); 9 (280); 11 (225); 13 (182)
+                                  1983 (43); 1972 (42); 1963 (40); 1967 (38); 1952 (37)
+                                           7 (151); 8 (138); 1 (137); 12 (134); 6 (130)
+                                                                      0 (1394); 1 (106)
+                                                                               1 (1235)
+                                                                                1 (155)
+                                                                                 1 (24)
+                                                                                 1 (83)
+                                                                                  1 (4)
+                                                                                 1 (34)
+                                                             2 (827); 1 (672); 9999 (1)
+                                             4 (159); 3 (145); 5 (143); 2 (134); 1 (91)
+                                            6 (310); 7 (227); 8 (198); 9 (91); 9999 (1)
+                                               withheld: identifier or quasi-identifier
+                                               withheld: identifier or quasi-identifier
+                                                                      1 (1241); 2 (259)
+                                                                       2 (767); 1 (733)
+                                               withheld: identifier or quasi-identifier
+                                               withheld: identifier or quasi-identifier
+                                                      2 (1082); 1 (356); 3 (46); 4 (16)
+                                              0.5 (77); 1 (63); 0 (42); 5 (39); 10 (16)
+                                               withheld: identifier or quasi-identifier
+                                               withheld: identifier or quasi-identifier
+                                                                       0 (757); 1 (743)
+                                                                       0 (755); 1 (745)
+                                                                       1 (751); 0 (749)
+                                                                                2 (192)
+                                                                                3 (378)
+                                                                                1 (378)
+                                                                                2 (186)
+                                                                                1 (371)
+                                                                                2 (186)
+                                                                                2 (185)
+                                                                                3 (371)
+                                                                                2 (184)
+                                                                                2 (193)
+                                                                                3 (377)
+                                                                                1 (377)
+                                                                                2 (187)
+                                                                                2 (187)
+                                                                                3 (374)
+                                                                                1 (374)
+                                            34 (43); 45 (42); 54 (40); 50 (38); 42 (37)
+                                                                       0 (1477); 1 (23)
+                                                                      0 (1220); 1 (280)
+                                                                      0 (1204); 1 (296)
+                                                                       1 (901); 0 (599)
+                                                                      0 (1130); 1 (370)
+                                                                      1 (1130); 0 (370)
+                                                                      0 (1190); 1 (310)
+                                                                      0 (1273); 1 (227)
+                                                                       1 (962); 0 (538)
+                                                                      0 (1169); 1 (331)
+                                                                      0 (1119); 1 (381)
+                                                                       0 (953); 1 (547)
+                                                                      0 (1127); 1 (373)
+                                                                      0 (1129); 1 (371)
+                                                                      0 (1313); 1 (187)
+
+============================================================
+FILE: study2prospecttheorycombinedanon.dta 
+SHAPE: 4590 rows x 4 columns
+
+FIRST SIX ROWS, ANALYSIS FIELDS (RAW VALUES)
+ certain gainframe flip explicit
+       1         1    0        0
+       1         1    0        0
+       1         1    0        0
+       1         1    0        0
+       1         1    0        0
+       1         1    0        0
+
+LAST SIX ROWS, ANALYSIS FIELDS (RAW VALUES)
+ certain gainframe flip explicit
+       0         0    1        1
+       0         0    1        1
+       0         0    1        1
+       0         0    1        1
+       0         0    1        1
+      NA        NA   NA       NA
+
+VARIABLE PROFILE
+  variable storage label n_missing pct_missing n_distinct minimum maximum
+   certain numeric               4  0.08714597          2       0       1
+ gainframe numeric               1  0.02178649          2       0       1
+      flip numeric               1  0.02178649          2       0       1
+  explicit numeric               1  0.02178649          2       0       1
+         top_values
+ 0 (2307); 1 (2279)
+ 1 (2308); 0 (2281)
+ 1 (2300); 0 (2289)
+ 0 (2324); 1 (2265)

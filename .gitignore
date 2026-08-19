@@ -1,0 +1,45 @@
+.DS_Store
+.RData
+.Rapp.history
+.Rhistory
+.Rproj.user/
+
+renv/library/
+renv/local/
+renv/python/
+renv/staging/
+
+data/*/source/*
+!data/*/source/README.md
+!data/*/source/manifest.csv
+!data/*/source/open_ended/
+data/*/source/open_ended/*
+!data/*/source/open_ended/README.md
+!data/*/source/open_ended/manifest.csv
+# The archival holding stays local for now: the legacy tree contains raw
+# exports, respondent verbatims (including in Sweave notebook sources),
+# historical manuscripts, and copyrighted PDFs, and the governance ledgers
+# reference it throughout.
+archive/
+
+logs/pipeline_*.log
+lit/*.blg
+
+ms/*.aux
+ms/*.bbl
+ms/*.bcf
+ms/*.blg
+ms/*.fdb_latexmk
+ms/*.fls
+ms/*.log
+ms/*.out
+ms/*.run.xml
+ms/*.synctex.gz
+ms/*.toc
+ms/*.xdv
+
+# Empty local staging directory retained only for compatibility with external copies.
+pasta/
+
+# Local scratch space; never tracked.
+scratch/
